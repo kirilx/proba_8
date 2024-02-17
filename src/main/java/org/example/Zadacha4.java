@@ -1,35 +1,30 @@
 package org.example;
-
 import java.util.Scanner;
 
 public class Zadacha4 {
-    private static Scanner keyboard;
 
     public static void main(String[] args) {
 
-        Scanner ribi = new Scanner(System.in);
-        System.out.println("Въведете цифра 1");
-        int number1 = ribi.nextInt();
-        Scanner ribi2 = new Scanner(System.in);
-        System.out.println("Въведете цифра 2");
-        int number2 = ribi.nextInt();
-        Scanner ribi3 = new Scanner(System.in);
-        System.out.println("Въведете цифра 3");
-        int number3 = ribi.nextInt();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Въведете цифра 1:");
+        int number1 = scanner.nextInt();
+
+        System.out.println("Въведете цифра 2:");
+        int number2 = scanner.nextInt();
+
+        System.out.println("Въведете цифра 3:");
+        int number3 = scanner.nextInt();
+
         int maxNumber = number1;
 
-        if (maxNumber > number2) {
+        if (number2 > maxNumber) {
             maxNumber = number2;
-
-            if (maxNumber > number3) {
-                maxNumber = number3;
-            }else {
-                System.out.println("Най-голямата цифра е: " + maxNumber);
-            }
-
-
-
-            }
         }
 
+        if (number3 > maxNumber)
+            maxNumber = number3;
+
+        System.out.println("Най-голямата цифра е: " + maxNumber);
     }
+}
